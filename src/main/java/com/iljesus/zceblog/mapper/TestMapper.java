@@ -2,9 +2,11 @@ package com.iljesus.zceblog.mapper;
 
 import com.iljesus.zceblog.entity.Test;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
+import java.util.Map;
 
 /**
 * @author zce
@@ -15,7 +17,8 @@ import java.util.List;
 @Mapper
 public interface TestMapper extends BaseMapper<Test> {
 
-    List<Test> findAll();
+    @MapKey("id")
+    Map<Integer,String> findAll();
 
     String findCitybyid(int id);
 }

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -22,7 +23,7 @@ public class TestController {
 
     @RequestMapping("/getAll")
     @ResponseBody
-    public List<Test> getTest(){
+    public Map<Integer,String> getTest(){
         System.out.println(testService.findAll());
         return testService.findAll();
     }

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
 * @author zce
@@ -20,7 +21,7 @@ public class TestServiceImpl extends ServiceImpl<TestMapper, Test> implements Te
     @Autowired //该注解的作用
     private TestMapper testMapper;
     @Override
-    public List<Test> findAll() {
+    public Map<Integer,String> findAll() {
         return testMapper.findAll();
     }
 

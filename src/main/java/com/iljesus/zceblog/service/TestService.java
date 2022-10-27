@@ -4,6 +4,7 @@ import com.iljesus.zceblog.entity.Test;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
+import java.util.Map;
 
 /**
 * @author zce
@@ -12,7 +13,7 @@ import java.util.List;
 */
 public interface TestService extends IService<Test> {
 
-    List<Test> findAll();
+    Map<Integer,String> findAll();
 
     String findCity(int id);
 }
